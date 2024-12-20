@@ -1,0 +1,45 @@
+name: PHP CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger on pull requests to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: Set up PHP
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'  # Specify PHP version (adjust as needed)
+          extensions: mbstring, xml, bcmath  # Common PHP extensions (add/remove as needed)
+
+      # Step 3: Install Composer
+      - name: Install Composer
+        run: |
+          curl -sS https://getcomposer.org/installer | php
+          sudo mv composer.phar /usr/local/bin/composer
+
+      # Step 4: Install PHP dependencies
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --prefer-dist
+
+      # Step 5: Run PHPUnit tests
+      - name: Run PHPUnit tests
+        run: ./vendor/bin/phpunit --configuration phpunit.xml
+
+      # Step 6: Push changes (if necessary)
+      - name: Push changes (if applicable)
+        run: git push origin main
+        # You may need to configure SSH keys or token authentication for pushing
+        # This step is optional and is required only if your pipeline needs to push changes
