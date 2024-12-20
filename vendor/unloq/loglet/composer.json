@@ -1,0 +1,34 @@
+{
+    "name": "unloq/loglet",
+    "version" : "1.0.0",
+    "description": "loglet.io - Encrypted Log Management System",
+    "keywords" : ["unloq", "two factor", "logging", "logger", "psr"],
+    "homepage" : "https://www.loglet.io",
+    "type": "library",
+    "require": {
+        "php": ">=5.6",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Unloq\\": [
+                "src/Unloq/"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Unloq\\": "tests/Unloq"
+        }
+    },
+    "authors": [
+        {
+            "name": "Florin Popescu",
+            "email": "florin@ltsdevelopment.com"
+        }
+    ],
+    "minimum-stability" : "dev"
+}

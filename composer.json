@@ -1,0 +1,10 @@
+{
+    "name": "nehapatil2/blog-management-system",
+    "description": "A PHP project for managing blog posts.",
+    "type": "project",
+    "require": {
+        "unloq/loglet": "dev-master"
+    },
+    "license": "MIT",
+    "minimum-stability": "dev"
+}
