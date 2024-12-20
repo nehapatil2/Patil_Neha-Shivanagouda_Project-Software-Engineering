@@ -1,0 +1,49 @@
+A `requirements.txt` file is typically used in Python projects to specify dependencies, but for a project using PHP, JavaScript, and CSS, a similar approach can be achieved by detailing the necessary tools, libraries, and environments. Here's a draft for a requirements document in plain text:
+
+---
+
+# Requirements for Responsive Blog Platform
+
+### Server Environment
+- Web Server: Apache (Recommended: XAMPP, WAMP, or LAMP stack)
+- Database: MySQL or MariaDB
+- PHP Version: 7.4 or later
+
+### PHP Extensions
+Ensure the following extensions are enabled:
+- mysqli
+- pdo_mysql
+- mbstring
+- json
+- curl
+
+### Development Tools
+- Version Control: Git
+- IDE/Editor: Visual Studio Code (or any preferred text editor with PHP and JavaScript support)
+- Testing Tools: 
+  - PHPUnit (for PHP unit testing)
+  - Selenium WebDriver (for automated browser testing)
+  - BrowserStack (for cross-browser and cross-device testing)
+
+### Frontend Libraries
+- CSS Frameworks: Bootstrap (Recommended for responsive design)
+- JavaScript: Native JavaScript (ES6+)
+- Optional Libraries: jQuery (if used in the project)
+
+### Social Media Integration
+- Facebook API for the commenting system:
+  - Ensure a Facebook App ID is configured.
+
+### Installation Requirements
+1. A local server environment such as:
+   - [XAMPP](https://www.apachefriends.org/index.html)
+   - [WAMP](http://www.wampserver.com/)
+   - [LAMP](https://linuxize.com/post/how-to-install-lamp-on-ubuntu-20-04/)
+2. MySQL database with a properly imported schema.
+
+### Browser Support
+The platform has been tested and is compatible with:
+- Google Chrome (Latest version)
+- Mozilla Firefox (Latest version)
+- Safari (Latest version)
+- Microsoft Edge (Chromium-based, Latest version)
